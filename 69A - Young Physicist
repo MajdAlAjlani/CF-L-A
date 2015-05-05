@@ -1,0 +1,33 @@
+
+#include<iostream>
+#include<cstdio>
+#include<vector>
+#include<string>
+#include<cmath>
+#include<algorithm>
+
+using namespace std;
+
+int main()
+{
+    int t ,x=0,y=0,z=0;//Don't use one variable to compute value of all columns l2no shart al twazon tkon mo7aslet alkwa m3dome bkl m7war x oo y oo z
+    cin>>t;
+    int a[t][3];
+
+    for(int i=0 ; i<t ; i++)
+        for(int j=0 ; j<3 ; j++)
+        cin>>a[i][j];
+
+    for(int i=0 ; i<3  ;i++)
+        for(int j=0 ; j<t ;++j)
+    {
+        if(i==0) x+=a[j][i];
+        else if(i==1) y+=a[j][i];
+        else z+=a[j][i];
+
+        cul+=a[j][i];
+    }
+    (x==0&&y==0&&z==0) ? cout<<"YES" : cout<<"NO";
+    return 0;
+}
+
