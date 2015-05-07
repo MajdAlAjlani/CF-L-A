@@ -1,0 +1,30 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+#include<cstdio>
+using namespace std;
+
+#define ff(i,n) for(int i=0 ; i<n ;++i)
+#define ee cout<<endl
+#define INF 999999999
+typedef vector<int> vi;
+
+int main()
+{
+    int a,b,c;
+    cin>>a>>b>>c;
+
+    int ex[6];
+    ex[0]=a*b*c;
+    ex[1]=(a+b)*c;
+    ex[2]=a+b+c;
+
+    ex[3]=(b+c) * a;
+    ex[4]= a*b + c;
+    ex[5]=b*c + a;
+
+    sort(ex,ex+6,greater<int>());
+    cout<<ex[0];
+
+
+}
