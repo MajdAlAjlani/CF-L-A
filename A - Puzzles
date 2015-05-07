@@ -1,0 +1,31 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+#include<cstdio>
+using namespace std;
+
+#define ff(i,n) for(int i=0 ; i<n ;++i)
+#define ee cout<<endl
+#define INF 999999999
+typedef vector<int> vi;
+
+int main()
+{
+    int m   , n;
+    cin>>n>>m;
+    int a[m];
+    ff(i,m) cin>>a[i];
+    sort(a,a+m,greater<int>());
+    int minimum=INF;
+    int sum;
+    for(int i=0 ; i < m - n + 1;i++)
+        {
+            sum=0;
+            for(int j=i ; j<n -1 + i; j++)
+                sum=sum+(a[j]-a[j+1]);
+        minimum=min(minimum,sum);
+    }
+
+    cout<<minimum<<endl;
+}
+
